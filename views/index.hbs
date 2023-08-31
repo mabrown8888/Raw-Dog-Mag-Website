@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/index_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+<body>
+    {{!-- Logo --}}
+    <nav>
+        <div class="logo">
+            <a href="/" class="logo-link"><img src="Logodesign3.jpg" alt="Logo"></a>
+        </div>
+
+    {{!-- Navigation Links --}}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Magazine</a></li>
+            <li class="profile-item">
+                <a href="/profile"><i class="fas fa-user"></i></a>
+                <div class="profile-dropdown">
+                    {{#if user}}
+                        <a href="/profile">Profile</a>
+                        <a href="/logout">Logout</a>
+                    {{else}}
+                        <a href="/login">Login</a>
+                        <a href="/register">Register</a>
+                    {{/if}}
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    {{!-- Body --}}
+    {{!-- <div class="container mt-4"> --}}
+        <div class="content-wrapper">
+            <div class="animation-container">
+                <i class="fas fa-globe-americas moving-icon" style="top: -100px; left: 0;"></i>
+                <i class="fas fa-newspaper moving-icon" style="top: 0; left: 100px;"></i>
+                <i class="fas fa-book moving-icon" style="top: 100px; left: 0;"></i>
+                <i class="fas fa-pencil-alt moving-icon" style="top: 0; left: -100px;"></i>
+                <h1 class="logo-text">Raw Dog Mag</h1>
+            </div>
+        
+            <div class="about-section">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt eros a quam consequat, eget sagittis odio interdum. Integer ac mattis nisl. Duis luctus mauris vel dictum.</p>
+            </div>
+        </div>
+    {{!-- </div> --}}
+
+    <footer class="footer">
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="contact-info">
+            <p>Email: rawdogmag@gmail.com</p>
+            <p>Phone: (252) 864-4030</p>
+        </div>
+    </footer>
+</body>
+</html>

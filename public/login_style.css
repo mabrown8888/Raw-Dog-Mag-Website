@@ -1,0 +1,104 @@
+/* Basic styling for the navigation bar */
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Increase spacing between navbar items */
+nav li {
+    margin-left: 20px;
+}
+
+/* Align the links to the right */
+nav ul {
+    margin-left: auto;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Adjust padding for better spacing */
+}
+
+nav li a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+/* Styling for the profile button */
+.profile-button a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.profile-button a:hover {
+    background-color: #ddd;
+}
+
+/* Position the dropdown menu absolutely */
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 30px; /* Adjust this value to move the dropdown more to the left */
+    opacity: 0;
+    visibility: hidden;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    max-width: 150px;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Show the dropdown menu on hover */
+.profile-item:hover .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Increase padding to make the options more clickable */
+.profile-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-dropdown a:hover {
+    background-color: #ddd;
+}
+
+/* Style for the logo image */
+.logo img {
+    width: auto; /* Maintain the aspect ratio */
+    height: 75px; /* Set the desired height */
+  }
+
+/* Style for the logo link */
+.logo-link {
+    display: inline-block; /* Make the link inline and retain the dimensions of the image */
+    margin-right: 20px; /* Add margin for spacing */
+}
